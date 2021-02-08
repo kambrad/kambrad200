@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KamronBradford Food Fusion</title>
+    <link rel = "stylesheet" type = "text/css" href = "more.css">
+</head>
+<body>
+    <section class = "bg-image"></section>
+        <nav>
+            <div class = "nav-header">
+                <img src = "images/foodlogo.png" class = "nav-logo">
+                <h4 class = "nav-name"><a href = "index.html">The Anomaly</a></h4>
+            </div>
+            <div class = "nav-links">
+                <ul>
+                    <li><a href = "about.html" >About</a></li>
+                    <li><a href = "breakfast.html">Breakfast</a></li>
+                    <li><a href = "lunch.html">Lunch</a></li>
+                    <li><a href = "dinner.html">Dinner</a></li>
+                    <li><a href = "extra.html">Extra</a></li>
+                    <li><a href = "more.html" style = "color: rgb(231, 180, 133)">Location</a></li>
+                    <li><a href = "more.html">Contact</a></li>
+                    <li><a href = "more.html">Event</a></li>
+                    <li><a href = "more.html">Order</a></li>
+                </ul>
+            </div>
+            </nav>
+            <!-- <div style = "width: 230px;"></div> -->
+            <div class = "location">
+                <h1>Location</h1>
+                <div class = "location-paragraph">
+                    <div class = "location-info">
+                        <h3>5321 St Alien Dr.</h3>
+                        <h3>Brooklyn NY - 11231</h3>
+                    </div>
+                </div>
+            </div>
+            <section class = "contact">
+                <h1>Contact</h1>
+                <div class = "contact-paragraph">
+                    <p>Kam'Ron Bradford</p>
+                    <p>kdbradfor@coastal.edu</p>
+                    <p>(555) 555-5555</p>
+                </div>
+            </section>
+            <section class = "event">
+                <h1>Event</h1>
+                <div class = "event-paragraph">
+                    <div class = "event-list">
+                        <ul>
+                            <li><a>Groundhog Day</a></li>
+                            <li><a>Pi Day</a></li>
+                            <li><a>Date Night</a></li>
+                            <li><a>Chef Off</a></li>
+                            <li><a>Cooking Competitions</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </section>
+
+            <section class = "order">
+                <h1>Order</h1>
+                <div class = "order-paragraph">
+                    <div class= "order-form">
+                        <label for= "name">Name</label>
+                        <input type = "text" name = "name" placeholder="Enter Name" size= "40">
+                        <label for = "email">Email</label>
+                        <input type = "email" name="email" placeholder="Enter Email" size = "40">
+                        <label for = "password">Password</label>
+                        <input type = "password" name = "password" placeholder="Enter Password" size = "40">
+                        <label for= "address">Address</label>
+                        <input type= "text" name = "address" placeholder="2507 Devine St" size = "40">
+                        <button type ="button">Submit</button>
+                    </div>
+                </div>
+                <div class = "order-image">
+                    <img src = "images/b1.jpg" width = "200">
+                    <img src = "images/b2.jpg" width = "200">
+                    <!-- <img src = "images/l1.jpg" width = "200">
+                    <img src = "images/l2.jpg" width = "200"> -->
+                    <img src = "images/d1.jpg" width = "200">
+                    <img src = "images/d2.jpg" width = "200">
+                    <img src = "images/e1.jpg" width = "200">
+                    <img src = "images/e2.jpg" width = "200">
+
+                </div>
+            </section>
+    </body>
+    <script type = "text/javascript">
+    document.addEventListener('DOMContentLoaded', (e) => {
+      const Nav = document.querySelector('nav');
+      const NavHeader = document.querySelector('.nav-header h4');
+      const NavLinks = document.querySelectorAll('.nav-links ul li a');
+      const Event = document.querySelector('.event');
+      const Contact = document.querySelector('.contact');
+      const Order = document.querySelector('.order');
+      const NavScrollLinks = document.querySelectorAll('.nav-links ul li a');
+      const ContactPOne = document.querySelector('.contact-paragraph p:nth-child(1)');
+      const ContactPTwo = document.querySelector('.contact-paragraph p:nth-child(2)');
+      const ContactPThree = document.querySelector('.contact-paragraph p:nth-child(3)');
+      ContactPThree.style.opacity = 0;
+    
+      function changeNavLinkColor(number){
+          NavScrollLinks[number].style.color = "orange";
+          console.log(NavScrollLinks[number])
+      }
+
+      function unChangeNavLinkColor(number){
+          NavScrollLinks[number].style.color = "black";
+      }
+
+      function ContactParagraph(){
+          ContactPOne.style.transform = "translateY(0%)";
+          ContactPOne.style.transition = "transform 20s ease-in";
+          ContactPOne.style.opacity = 1;
+          ContactPOne.style.transition = "opacity 2s ease-in";
+
+          ContactPTwo.style.opacity = 1;
+          ContactPTwo.style.transform = "translateY(0%)";
+          ContactPTwo.style.transition = "transform 1.5s ease";
+
+          
+          ContactPThree.style.opacity = 1;
+          ContactPThree.style.transform = "translateY(0%)";
+          ContactPThree.style.transition = "transform 2.0s ease";
+      }
+      function unContactParagraph(){
+          ContactPOne.style.transform = "translateY(200%)";
+          ContactPOne.style.transition = "transform 20s ease-in";
+          ContactPOne.style.opacity = 0;
+          ContactPOne.style.transition = "opacity 2s ease-in";
+
+          ContactPTwo.style.opacity = 0;
+          ContactPTwo.style.transform = "translateY(300%)";
+          ContactPTwo.style.transition = "transform 1.5s ease";
+
+
+          ContactPThree.style.opacity = 1;
+          ContactPThree.style.transform = "translateY(350%)";
+          ContactPThree.style.transition = "transform 3.5s ease";
+      }
+
+
+   
+
+    window.onscroll = (e) => {
+        if(this.scrollY > 3){
+              Nav.className = "navscroll";
+              NavHeader.style.color = "black";
+              NavLinks.forEach(i => {
+                  i.style.color = "black";
+              })
+              changeNavLinkColor(5);
+            } else{
+                Nav.classList.add('navunscroll');
+                NavHeader.style.color = "white";
+                NavLinks.forEach(i => {
+                  i.style.color = "white";
+              })
+            }
+
+            if(this.scrollY > 0){
+                Event.style.transform = `translateY(-${this.scrollY}px)`;
+            }else{
+                return 0;
+            }
+
+            if(this.scrollY > 200){
+                unChangeNavLinkColor(5);
+                changeNavLinkColor(6);
+                ContactParagraph();
+            }else{
+                unContactParagraph();
+            }
+
+            if(this.scrollY > 512){
+                unChangeNavLinkColor(6)
+                changeNavLinkColor(7);
+            }else{
+                return 0;
+            }
+            if(this.scrollY > 1021){
+                unChangeNavLinkColor(7);
+                changeNavLinkColor(8);
+            }
+
+            
+        }
+        // const options = {
+        //     root: null,
+        //     rootMargin: '-70px',
+        //     threhold: 1.0
+        // }
+        // const observeContact = new IntersectionObserver(entries => {
+        //     entries.forEach(entry => {
+        //        entry.isIntersecting ? changeNavLinkColor(6) : "";
+        //     })
+        // }, options);
+
+        // observeContact.observe(Contact);
+        
+        
+    })
+
+
+    
+    </script>
+</html>

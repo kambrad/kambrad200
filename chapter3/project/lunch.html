@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Fusion | Lunch |</title>
+    <link rel = "stylesheet" type = "text/css" href = "lunch.css">
+</head>
+<body>
+    <section class = "bg-image"></section>
+        <nav>
+            <div class = "nav-header">
+                <img src = "images/foodlogo.png" class = "nav-logo">
+                <h4 class = "nav-name"><a href = "index.html">The Anomaly</a></h4>
+            </div>
+            <div class = "nav-links">
+                <ul>
+                    <li><a href = "about.html" >About</a></li>
+                    <li><a href = "breakfast.html" >Breakfast</a></li>
+                    <li><a href = "lunch.html" style = "color: rgb(231, 180, 133)">Lunch</a></li>
+                    <li><a href = "dinner.html" >Dinner</a></li>
+                    <li><a href = "extra.html">Extra</a></li>
+                    <li><a href = "more.html">Location</a></li>
+                    <li><a href = "more.html">Contact</a></li>
+                    <li><a href = "more.html">Event</a></li>
+                    <li><a href = "more.html">Order</a></li>
+                </ul>
+            </div>
+            <div style = "width: 230px;"></div>
+        </nav>
+        <section id = "lunch">
+        <div class = "lunch-one">
+            <div class = "lunch-one-image">
+                <img src = "images/l1.jpg" class = "lunchone-img" width = "380">
+            </div>
+            <div class="lunchone-paragraph">
+                <p>Noodle and Shrimp Bowl</p>
+                <p>Price: $32.00</p>
+                <p>This dish contains noodles filled with marinara sauce and shrimp. Also, this serving is hot, tasty, and super scrumptious. Mixed and sprinkled with cheddar and flavored with sauce.</p>
+                
+            </div>
+           <button type = "button" class = "lunchone-btn">More Info</button>
+           <p class = "btnone-msg">(double click to exit info).</p>
+        </div>
+        <div class = "lunch-two">
+            <div class = "lunch-two-image">
+                <img src = "images/l2.jpg" class = "lunchtwo-img" width = "310">
+            </div>
+            <div class = "lunchtwo-paragraph">
+                <p>Pickle Hamburger</p>
+                <p>Price: $9.99</p>
+                <p>This meal only serves a hamburger with pickles, onions, and vegan protein. The maximum number of hamburgers is two. Protein is tender and juicy and is non-gmo. The vegetables are fresh and consume lots of vitamins. </p>
+               
+            </div>
+            <button type = "button" class = "lunchtwo-btn">More Info</button>
+        </div>
+        </section>
+
+        <div class = "display-info-one">
+            <h1 class = "info-header-one">More Information</h1>
+            <div class = "info-list">
+                <h4>Allergen List:</h4>
+                <ul>
+                    <li><a>Marinara Sauce</a></li>
+                    <li><a>Cheddar Cheese</a></li>
+                    <li><a>Shrimp</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class = "display-info-two">
+            <h1 class = "info-header-two">More Information</h1>
+            <div class = "info-list">
+                <h4>Allergen List:</h4>
+                <ul>
+                    <li><a>Onions</a></li>
+                    <li><a>Pickles</a></li>
+                </ul>
+            </div>
+        </div>
+       
+        <footer class = "footer">
+            <h5>&copy; <p class = "copy-name">the anomaly</p></h5>
+            <div class = "footer-links">
+                <ul>
+                    <li><a href = "#employment">Employment</a></li>
+                    <li><a href = "#survery">Survey</a></li>
+                </ul>
+            </div>
+        </footer>
+    </body>
+    <script type = "text/javascript">
+    const ImageOne = document.getElementsByClassName('lunchone-img')[0];
+    const ImageTwo = document.getElementsByClassName('lunchtwo-img')[0];
+    const ButtonOne = document.getElementsByClassName('lunchone-btn')[0];
+    const ButtonTwo = document.getElementsByClassName('lunchtwo-btn')[0];
+    const InfoOne = document.getElementsByClassName('display-info-one')[0];
+    const InfoTwo = document.getElementsByClassName('display-info-two')[0];
+    const lunch = document.querySelector('#lunch');
+    const InfoMsg = document.querySelector('.btnone-msg');
+
+
+    function ImageStyle(x){
+        x.style.transform = "translateX(0%)";
+        x.style.transition = "transform 650ms ease-in";
+    }
+
+    var i = 0;
+    while(i < 2500){
+        ++i;
+        setTimeout(() => {
+            ImageStyle(ImageOne);
+            ImageStyle(ImageTwo);
+        }, i)
+    }
+
+
+    ButtonOne.addEventListener('click', (e) => {
+        InfoOne.style.visibility = "visible";
+        InfoOne.style.height = "60vh";
+        InfoOne.style.transition = "all .5s ease";
+       InfoMsg.style.opacity = 1;
+       InfoTwo.style.height = "0vh";
+    })
+    ButtonOne.addEventListener('dblclick', (e) => {
+        InfoOne.style.visibility = "hidden";
+        InfoOne.style.height = "0vh";
+        InfoOne.style.transition = "all .3s ease";
+       InfoMsg.style.opacity = 0;
+    })
+
+    ButtonTwo.addEventListener('click', (e) => {
+        InfoTwo.style.visibility = "visible";
+        InfoTwo.style.height = "60vh";
+        InfoTwo.style.transition = "all .5s ease";
+       InfoMsg.style.opacity = 1;
+       InfoOne.style.height = "0vh";
+    })
+    ButtonTwo.addEventListener('dblclick', (e) => {
+        InfoTwo.style.visibility = "hidden";
+        InfoTwo.style.height = "0vh";
+        InfoTwo.style.transition = "all .3s ease";
+       InfoMsg.style.opacity = 0;
+    })
+    </script>
+</html>

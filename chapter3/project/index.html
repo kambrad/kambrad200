@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kamron Bradford Food Fusion</title>
+    <link rel = "stylesheet" type = "text/css" href = "index.css">
+</head>
+<body>
+    <section class = "bg-image"></section>
+        <nav>
+            <div class = "nav-header">
+                <img src = "images/foodlogo.png" class = "nav-logo">
+                <h4 class = "nav-name">The Anomaly</h4>
+            </div>
+            <div class = "nav-links">
+                <ul>
+                    <li><a href = "about.html">About</a></li>
+                    <li><a href = "breakfast.html">Breakfast</a></li>
+                    <li><a href = "lunch.html">Lunch</a></li>
+                    <li><a href = "dinner.html">Dinner</a></li>
+                    <li><a href = "extra.html">Extra</a></li>
+                    <li><a href = "more.html">Location</a></li>
+                    <li><a href = "more.html">Contact</a></li>
+                    <li><a href = "more.html">Event</a></li>
+                    <li><a href = "more.html">Order</a></li>
+                </ul>
+            </div>
+            <div style = "width: 230px;"></div>
+        </nav>
+
+        <section class = "welcome">
+            <div class = "welcome-image">
+                <img src = "images/foodlogo.png" class = "welcome-img" width="250">
+            </div>
+            <div class = "welcome-info">
+                <h5>We serve delicious foods to customers who are satisfied with our cooking's. We acquire well-organized dishes to meet our customers needs and help develop a clean environment for which it is safe to eat. We require dine-ins and delivery as well.</h5>
+                <h5>We are a very dedicated and hard-working restaurant who serves top notch dishes. We promise to never disappoint our customers with false pictures in-which does not match their selected dishes.</h5>
+            </div>
+        </section>
+        <button type = "button"><a href>Continue</a></button>
+
+        <div class = "stop">
+            <p class = "stop-msg">click to pause the slideshow -></p>
+            <div class = "stop-toggle"></div>
+        </div>
+
+        <footer>
+            <h5>&copy; <p class = "copy-name">the anomaly</p></h5>
+            <div class = "footer-links">
+                <ul>
+                    <li><a href = "employment.html">Employment</a></li>
+                    <li><a href = "survery.html">Survey</a></li>
+                </ul>
+            </div>
+        </footer>
+</body>
+<script type="text/javascript">
+
+const welcomeImage = document.getElementsByClassName('welcome-image')[0];
+const welcomeInfo = document.getElementsByClassName('welcome-info')[0];
+const slideToggle = document.getElementsByClassName('stop-toggle')[0];
+
+// welcomeImage.style.transform = "translateX(-200%)";
+// welcomeInfo.style.transform = "translateX(200%)";
+
+var i = 0, r = 0, t = 0;
+var s = [];
+
+function WIMAGE(){
+    setInterval(() => {
+        i = i + 1;
+        if(i == 2){
+            welcomeImage.style.transform = "translateX(-220%)";
+            welcomeImage.style.transition = "transform 650ms ease";
+            i = 0;
+        }else{
+            welcomeImage.style.transform = "translateX(0%)";
+            welcomeImage.style.transition = "transform 650ms ease";
+        }
+        // console.log(i)
+    }, 2500)
+}
+function WINFO(){
+    setInterval(() => {
+        r = r + 1;
+        if(r == 2){
+            welcomeInfo.style.transform = "translateX(0%)";
+            welcomeInfo.style.transition = "transform 650ms ease";
+            r = 0;
+        }else{
+            welcomeInfo.style.transform = "translateX(200%)";
+            welcomeInfo.style.transition = "transform 650ms ease";
+        }
+    }, 2500)
+}
+WIMAGE();
+WINFO();
+
+
+slideToggle.addEventListener('click', (e) => {
+    ++t;
+    if(t == 1){
+        slideToggle.style.backgroundColor = "white";
+    }else if(t == 2){
+        slideToggle.style.backgroundColor = "initial";
+    }else if(t == 3){
+        slideToggle.style.backgroundColor = "white";
+        t = 0 + 1;
+    }
+})
+
+</script>
+</html>

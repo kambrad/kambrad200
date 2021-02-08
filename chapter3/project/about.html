@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KamronBradford Food Fusion</title>
+    <link rel = "stylesheet" type = "text/css" href = "about.css">
+</head>
+<body>
+    <section class = "bg-image"></section>
+        <nav>
+            <div class = "nav-header">
+                <img src = "images/foodlogo.png" class = "nav-logo">
+                <h4 class = "nav-name"><a href = "index.html">The Anomaly</a></h4>
+            </div>
+            <div class = "nav-links">
+                <ul>
+                    <li><a href = "about.html" style = "color: rgb(231, 180, 133)">About</a></li>
+                    <li><a href = "breakfast.html">Breakfast</a></li>
+                    <li><a href = "lunch.html">Lunch</a></li>
+                    <li><a href = "dinner.html">Dinner</a></li>
+                    <li><a href = "extra.html">Extra</a></li>
+                    <li><a href = "more.html">Location</a></li>
+                    <li><a href = "more.html">Contact</a></li>
+                    <li><a href = "more.html">Event</a></li>
+                    <li><a href = "more.html">Order</a></li>
+                </ul>
+            </div>
+            <div style = "width: 230px;"></div>
+        </nav>
+        <div class = "about-img">
+            <img src = "images/aboutlogo.png" class = "about-image" width = "300">
+        </div>
+
+        <div class = "about-p">
+            <div class = "about-header">
+                <h1>The Anomaly</h1>
+                <h3>About</h3>
+                <div class = "about-paragraph">
+                    <p>Welcome to The Anomaly. This site is recommended to users who enjoy eating various meals, in-which sustains there stomachs from hunger. Our restaurant serve vegan meals (mostly vegan) and delicious appetizers that will make consumers come back for more.</p>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+        <footer class = "footer">
+            <h5>&copy; <p class = "copy-name">the anomaly</p></h5>
+            <div class = "footer-links">
+                <ul>
+                    <li><a href = "employment.html">Employment</a></li>
+                    <li><a href = "survery.html">Survey</a></li>
+                </ul>
+            </div>
+        </footer>
+    </body>
+    <script type = "text/javascript">
+    document.addEventListener('DOMContentLoaded', (e) => {
+        const About = document.getElementsByClassName('about-p');
+        const Image = document.getElementsByClassName('about-img');
+
+        let i = 0;
+        while(i < 1){
+            ++i;
+            setTimeout(() => {
+                About[i - 1].style.transform = "translateX(60%)";
+                About[i - 1].style.transition = "transform 650ms ease";
+            }, 2000);
+
+
+            setTimeout(() => {
+                Image[i - 1].style.transform = "translateY(35%)";
+                Image[i - 1].style.transition = "transform 650ms ease";
+            }, 1000)
+        }
+    })
+    </script>
+</html>

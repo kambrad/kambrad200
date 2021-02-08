@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body{
+    scroll-behavior: smooth;
+    background-color: black;
+    overflow: hidden;
+}
+
+.bg-image{
+    background-image: url('images/foodbg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 1370px;
+    height: 600px; 
+    background-position-y: -45px;
+    min-height: 100vh;
+    opacity: 0.2;
+    z-index: -1;
+    position: absolute;
+}
+nav{
+    z-index: 1;
+    min-height: 20vh;
+    display: flex;
+    align-items: center;
+    background: transparent;
+    justify-content: space-around;
+}
+.nav-header{
+    display: flex;
+    align-items: center;
+    width: 250px;
+    justify-content: space-evenly;
+    font-size: 20px;
+}
+.nav-logo{
+    width: 60px;
+    z-index: 1000;
+}
+.nav-name{
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+.nav-links{
+    display: flex;
+    text-align: center;
+}
+.nav-links ul{
+    display: flex;
+    list-style: none;
+    text-decoration: none;
+    justify-content: space-around;
+    width: 530px;
+}
+.nav-links ul li a{
+    color: white;
+    font-size: 12px;
+    text-decoration: none;
+    font-weight: 800;
+}
+.welcome{
+    border:1px solid white;
+    display: flex;
+    margin:0 auto;
+    max-width: 500px;
+    height:60vh;
+    box-shadow: 1px 1px 40px 25px black;
+    overflow: hidden;
+}
+.welcome-image{
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-left: 140px;
+    /* transform: translateX(-200%); */
+}
+.welcome-info{
+    color: white;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    transform: translateX(200%);
+}
+button{
+    position: absolute;
+    left: 44.8%;
+    width: 150px;
+    padding: 12px;
+    outline: none;
+    border: 1px solid white;
+    background: transparent;
+    color: white;
+    text-transform: uppercase;
+    font-size: 12px;
+    cursor: pointer;
+    margin: 20px 12px;
+}
+button:hover{
+    background: white;
+    color: black;
+    opacity: 0.9;
+    font-weight: bold;
+    transition: 650ms ease;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.stop{
+    position: absolute;
+    right: 12px;
+    color: white;
+    display: flex;
+    width: 300px;
+    align-items: center;
+    justify-content: flex-end;
+    bottom: 15px;
+}
+.stop-msg{
+    font-size: 13px;
+    margin-right: 10px;
+    color: white;
+    opacity: 0;
+    position: relative;
+    animation: msg 5s forwards infinite;
+}
+.stop-toggle{
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+@keyframes msg{
+    0%{
+    font-size: 13px;
+    margin-right: 10px;
+    color: white;
+    opacity: 0;
+    position: relative;
+    }
+    40%{
+    font-size: 13px;
+    margin-right: 10px;
+    color: white;
+    opacity: 1;
+    position: relative;
+    }
+}
+
+footer{
+    color: white;
+    display: flex;
+    top: 95%;
+    width: 1600px;
+    max-width: 1550px;
+    justify-content: space-around;
+    align-items: center;
+    right: -3%;
+    position: absolute;   
+}
+footer h5{
+    display: flex;
+    align-items: center;
+
+}
+footer h5 .copy-name{
+    font-size: 10px;
+    padding-top: 1px;
+}
+.footer-links ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    width: 130px;
+}
+.footer-links ul li a{
+    font-size: 12px;
+    font-weight: 800;
+}
+.about-img{
+    position: absolute;
+    /* left: 20%;
+    top: 28%; */
+    left: 20%;
+    transform: translateY(180%);
+}
+
+.about-p{
+    border: 1px solid white;
+    margin: 100px auto;
+    max-width: 600px;
+    height: 50vh;
+    /* transform: translateX(60%); */
+    padding-top: 10px;
+    transform: translateX(200%);
+}
+.about-p .about-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.about-p .about-header h1{
+    font-family: 'Great Vibes', cursive;
+    font-size: 25px;
+    color: white;
+}
+.about-p .about-header h3{
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 10px;
+    font-weight: bold;
+    font-size: 40px;
+}
+.about-paragraph{
+    text-align: center;
+    margin-top: 18px;
+    width: 400px;
+}
+.about-paragraph p{
+    color: white;
+    opacity: 0;
+    animation: aboutp 2s forwards;
+    animation-delay: 2.5s;
+}
+@keyframes aboutp{
+    0%{
+        color: white;
+        opacity: 0;
+    }
+    100%{
+        color: white;
+        opacity: 1;
+    }
+}

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KamronBradford Food Fusion</title>
+    <link rel = "stylesheet" type = "text/css" href = "breakfast.css">
+</head>
+<body>
+    <section class = "bg-image"></section>
+        <nav>
+            <div class = "nav-header">
+                <img src = "images/foodlogo.png" class = "nav-logo">
+                <h4 class = "nav-name"><a href = "index.html">The Anomaly</a></h4>
+            </div>
+            <div class = "nav-links">
+                <ul>
+                    <li><a href = "about.html" >About</a></li>
+                    <li><a href = "breakfast.html" style = "color: rgb(231, 180, 133)">Breakfast</a></li>
+                    <li><a href = "lunch.html">Lunch</a></li>
+                    <li><a href = "dinner.html">Dinner</a></li>
+                    <li><a href = "extra.html">Extra</a></li>
+                    <li><a href = "more.html">Location</a></li>
+                    <li><a href = "more.html">Contact</a></li>
+                    <li><a href = "more.html">Event</a></li>
+                    <li><a href = "more.html">Order</a></li>
+                </ul>
+            </div>
+            <div style = "width: 230px;"></div>
+        </nav>
+        <section id = "breakfast">
+        <div class = "breakfast-one">
+            <div class = "breakfast-one-image">
+                <img src = "images/b1.jpg" class = "breakfastone-img" width = "380">
+            </div>
+            <div class="breakfastone-paragraph">
+                <p>Colorful Veggie Dish</p>
+                <p>Price: $79.99</p>
+                <p>This extraordinary dish contains collard greens, mozzarella bread, and tomatoe slices. Once we serve you this meal and when the taste first hits your tastebuds,
+                    it will leave you satisfied and full. Consumers who select this meal will leave <i>The Anomaly</i> very satisfied. </p>
+
+                
+            </div>
+           <button type = "button" class = "breakfastone-btn">More Info</button>
+           <p class = "btnone-msg">(double click to exit info).</p>
+        </div>
+        <div class = "breakfast-two">
+            <div class = "breakfast-two-image">
+                <img src = "images/b2.jpg" class = "breakfasttwo-img" width = "402">
+            </div>
+            <div class = "breakfasttwo-paragraph">
+                <p>Drippy Vegan Pancakes</p>
+                <p>Price: $100.00</p>
+                <p>This beautiful dish contain pancakes with a selected side of strawberries, grapes, or blueberries. You can choose either of those three sides with the fresh and zesty pancakes. The number of pancakes ranges from 3-5. This meal would leave customers very satified and crave-free.</p>
+               
+            </div>
+            <button type = "button" class = "breakfasttwo-btn">More Info</button>
+        </div>
+        </section>
+
+        <div class = "display-info-one">
+            <h1 class = "info-header-one">More Information</h1>
+            <div class = "info-list">
+                <h4>Allergen List:</h4>
+                <ul>
+                    <li><a>Egg whites</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class = "display-info-two">
+            <h1 class = "info-header-two">More Information</h1>
+            <div class = "info-list">
+                <h4>Allergen List:</h4>
+                <ul>
+                    <li><a>Strawberries</a></li>
+                    <li><a>Syrup</a></li>
+                </ul>
+            </div>
+        </div>
+       
+        <footer class = "footer">
+            <h5>&copy; <p class = "copy-name">the anomaly</p></h5>
+            <div class = "footer-links">
+                <ul>
+                    <li><a href = "#employment">Employment</a></li>
+                    <li><a href = "#survery">Survey</a></li>
+                </ul>
+            </div>
+        </footer>
+    </body>
+    <script type = "text/javascript">
+    const ImageOne = document.getElementsByClassName('breakfastone-img')[0];
+    const ImageTwo = document.getElementsByClassName('breakfasttwo-img')[0];
+    const ButtonOne = document.getElementsByClassName('breakfastone-btn')[0];
+    const ButtonTwo = document.getElementsByClassName('breakfasttwo-btn')[0];
+    const InfoOne = document.getElementsByClassName('display-info-one')[0];
+    const InfoTwo = document.getElementsByClassName('display-info-two')[0];
+    const Breakfast = document.querySelector('#breakfast');
+    const InfoMsg = document.querySelector('.btnone-msg');
+
+
+    function ImageStyle(x){
+        x.style.transform = "translateX(0%)";
+        x.style.transition = "transform 650ms ease-in";
+    }
+
+    var i = 0;
+    while(i < 2500){
+        ++i;
+        setTimeout(() => {
+            ImageStyle(ImageOne);
+            ImageStyle(ImageTwo);
+        }, i)
+    }
+
+
+    ButtonOne.addEventListener('click', (e) => {
+        InfoOne.style.visibility = "visible";
+        InfoOne.style.height = "60vh";
+        InfoOne.style.transition = "all .5s ease";
+       InfoMsg.style.opacity = 1;
+       InfoTwo.style.height = "0vh";
+    })
+    ButtonOne.addEventListener('dblclick', (e) => {
+        InfoOne.style.visibility = "hidden";
+        InfoOne.style.height = "0vh";
+        InfoOne.style.transition = "all .3s ease";
+       InfoMsg.style.opacity = 0;
+    })
+
+    ButtonTwo.addEventListener('click', (e) => {
+        InfoTwo.style.visibility = "visible";
+        InfoTwo.style.height = "60vh";
+        InfoTwo.style.transition = "all .5s ease";
+       InfoMsg.style.opacity = 1;
+       InfoOne.style.height = "0vh";
+    })
+    ButtonTwo.addEventListener('dblclick', (e) => {
+        InfoTwo.style.visibility = "hidden";
+        InfoTwo.style.height = "0vh";
+        InfoTwo.style.transition = "all .3s ease";
+       InfoMsg.style.opacity = 0;
+    })
+    </script>
+</html>
